@@ -1,6 +1,6 @@
 [package]
 name = "untgz"
-version = "0.0.2"
+version = "0.0.3"
 edition = "2021"
 authors = ["邱张华, <qiuzhanghua@gmail.com>"]
 
@@ -9,3 +9,4 @@ clap = { version = "4.5.26", features = ["derive", "unicode", "wrap_help"] }
 flate2 = "1.0.35"
 tar = "0.4.43"
 tempfile = "3.15.0"
+zip = "2.2.2"
