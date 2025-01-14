@@ -8,9 +8,14 @@ use zip::ZipArchive;
 
 use clap::{CommandFactory, Parser};
 
-/// Partial implementation of `tar xf`
+/// Partially `tar xf` by 邱张华 <qiuzhanghua@icloud.com>
 #[derive(Parser, Debug)]
-#[command(version, about, author, long_about = None)]
+#[command(
+    version,
+    about,
+    author,
+    long_about = "Extract files from .tar, .tar.gz, .tgz, .zip"
+)]
 struct Args {
     #[arg(short('C'), long("directory"), help("change to directory DIR"), default_value_t = String::from("."))]
     directory: String,
