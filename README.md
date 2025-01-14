@@ -1,2 +1,1 @@
-## Partial implements of `tar xf`
-
+## Partial implementation of `tar xf`

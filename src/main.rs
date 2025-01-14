@@ -38,7 +38,7 @@ fn main() -> io::Result<()> {
         let ext = file.extension().unwrap().to_str().unwrap();
         match ext {
             "gz" => {
-                println!("Extracting {:?} -> {}", file, working_dir);
+                // println!("Extracting {:?} -> {}", file, working_dir);
                 let stem = file.file_stem().unwrap().to_string_lossy().into_owned();
                 if !stem.ends_with(".tar") {
                     continue;
@@ -49,7 +49,7 @@ fn main() -> io::Result<()> {
                 extract(tar_file.to_str().unwrap(), &working_dir)?;
             }
             "tgz" => {
-                println!("Extracting {:?} -> {}", file, working_dir);
+                // println!("Extracting {:?} -> {}", file, working_dir);
                 let stem = file.file_stem().unwrap().to_string_lossy().into_owned();
                 let temp_dir = tempfile::tempdir()?;
                 let tar_file = temp_dir.path().join(stem + ".tar");
@@ -57,7 +57,7 @@ fn main() -> io::Result<()> {
                 extract(tar_file.to_str().unwrap(), &working_dir)?;
             }
             "tar" => {
-                println!("Extracting {:?} -> {}", file, working_dir);
+                // println!("Extracting {:?} -> {}", file, working_dir);
                 extract(file.to_str().unwrap(), &working_dir)?;
             }
             _ => {
