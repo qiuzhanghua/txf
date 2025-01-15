@@ -1,6 +1,6 @@
 [package]
-name = "untgz"
-version = "0.0.3"
+name = "txf"
+version = "0.0.4"
 edition = "2021"
 authors = ["邱张华, <qiuzhanghua@gmail.com>"]
 
